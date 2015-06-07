@@ -76,9 +76,9 @@ public class RegActivity extends BaseActivity implements OnClickListener {
 		btnSendCode = (Button) findViewById(R.id.btn_send_code);
 		timeCount = new TimeCount(60000, 1000);
 
-		phone = (EditTextWithDel) findViewById(R.id.et_phone);
-
-		register = (Button) findViewById(R.id.btn_register);
+//		phone = (EditTextWithDel) findViewById(R.id.et_phone);
+//
+//		register = (Button) findViewById(R.id.btn_register);
 		register.setOnClickListener(this);
 
 		code = (EditText) findViewById(R.id.et_code);

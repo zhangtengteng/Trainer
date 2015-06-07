@@ -15,37 +15,101 @@
         android:paddingLeft="5dp"
         android:paddingRight="5dp" >
 
-        <com.elife.diy.EditTextWithDel
-            android:id="@+id/et_phone"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:layout_width="160dp"
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_right" />
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_weight="1.70"
-            android:background="@drawable/corners_bg_green"
-            android:singleLine="true"
-            android:textColor="@color/black" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="轻输入11位手机号码"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/btn_send_code"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_marginLeft="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/corners_bg_reg0_bule"
+            android:background="#63dfb5"
+            android:padding="10dp"
             android:text="@string/reg_user_send_code" />
     </LinearLayout>
+
+    <!-- 验证码 -->
 
     <EditText
         android:id="@+id/et_code"
         android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/corners_bg_green"
+        android:layout_height="60dp"
+        android:background="#eafaf0"
+        android:hint="输入手机短信收到的验证码"
+        android:padding="10dp"
         android:textColor="@color/black"
         android:textSize="15sp" />
+
+    <include layout="@layout/hline" />
+    <!-- 密码 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#eafaf0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/arrow_right" />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:hint="输入不少于6位数密码"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <include layout="@layout/hline" />
+
+    <!-- 登陆 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="#eafaf0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/arrow_right" />
+        </LinearLayout>
+        
+        <include layout="@layout/vline"/>
+        <Button
+            android:id="@+id/btn_register"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="登陆"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -53,14 +117,6 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:orientation="horizontal" >
-
-        <ImageButton
-            android:id="@+id/tb_agree"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginLeft="5dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/reg_agree" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -82,17 +138,5 @@
             android:textColor="@color/top_title"
             android:textSize="12sp" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="20dp"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        android:text="@string/reg_user_ok"
-        android:layout_width="fill_parent"
-        android:layout_height="40dp"
-        android:background="@drawable/corners_bg_reg0_bule" />
 
 </LinearLayout>
